@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-    import blog_post from '@/cms/queries/blog_post';
+    import blog_post from '~~/cms/queries/recipe';
     import header from '@/cms/queries/header';
     import footer from '@/cms/queries/footer';
 
