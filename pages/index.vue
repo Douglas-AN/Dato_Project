@@ -17,7 +17,7 @@
         Page de référence vers tous les éléments vu en cours
     </AppInfo> -->
 
-  <h1>Home page</h1>
+  <h1>Home page 1</h1>
 </template>
 
 <script>
