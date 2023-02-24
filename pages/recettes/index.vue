@@ -1,12 +1,13 @@
 <template>
   <v-container>
   <h1>Recettes</h1>
-  <ul class="d-flex justify-space-between">
+  <ul v-if="!recipesPending" class="d-flex justify-space-between">
     <li v-for="recipe in recipes.allRecipes" :key="recipe.id">
       <v-card class="mx-auto" max-width="400">
         <v-img
           class="align-end text-white"
-          height="200"
+          
+          
           :src="recipe.image.url"
           cover
         >
@@ -24,11 +25,9 @@
         <v-card-actions>
           <v-btn color="orange"> Share </v-btn>
 
-          <v-btn color="orange">
-            <NuxtLink
-              :to="{ name: 'recettes-slug', params: { slug: recipe.slug } }"
-              >Voir la recette
-            </NuxtLink>
+          <v-btn color="orange" :to="{ name: 'recettes-slug', params: { slug: recipe.slug } }">
+            Voir la recette
+          
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -38,11 +37,13 @@
 </template>
 
 <script setup>
-import recipe from "~~/cms/queries/recipes";
+import AllRecipes from "~~/cms/queries/recipes";
 
 const { data: recipes, pending: recipesPending } = await useLazyAsyncQuery(
-  recipe
+  AllRecipes
 );
+
+import SingleRecipe from "~~/cms/queries/single_recipe";
 </script>
 
 <style scoped>
