@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>Layout header</h1>
-    <NuxtLink to="/">Home page</NuxtLink>
+    <Appbar></Appbar>
     <NuxtPage/>
   </div>
 </template>
