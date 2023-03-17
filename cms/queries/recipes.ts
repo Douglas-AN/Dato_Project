@@ -7,6 +7,7 @@ query Recipes {
     }
     id
     titre
+    content
   }
 }
 `

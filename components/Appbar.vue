@@ -1,8 +1,5 @@
 <template>
   <v-toolbar app>
-    <span class="hidden-sm-and-up">
-      <v-toolbar-side-icon @click="sidebar = !sidebar"> </v-toolbar-side-icon>
-    </span>
     <v-toolbar-title>
       <router-link to="/" style="cursor: pointer">
         <img src="~assets/logo.png" alt="logo" />
@@ -27,8 +24,6 @@ export default {
       sidebar: false,
       menuItems: [
         { title: "Coin des recettes", path: "/recettes" },
-        // { title: "Sign Up", path: "/signup", icon: "face" },
-        // { title: "Sign In", path: "/signin", icon: "lock_open" },
       ],
     };
   },
